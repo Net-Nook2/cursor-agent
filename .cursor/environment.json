@@ -1,7 +1,1 @@
-{
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
-  },
-  "terminals": []
-}
+﻿{"sharing": "file","usageBasedPricing": false,"githubAccess": "verified","baseEnvironment": { "type": "dockerfile", "enabled": false },"runtime": { "type": "local", "python": "C:\\Users\\Choua\\Projects\\cursor-agent\\.venv\\Scripts\\python.exe", "node": "node", "shell": "powershell" },"secrets": { "OPENAI_API_KEY": "${env:OPENAI_API_KEY}" }}
