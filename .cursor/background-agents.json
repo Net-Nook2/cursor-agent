@@ -1,1 +1,20 @@
-﻿{"agents":[{"name":"CodeGuardian","description":"Agent avancé pour refactoring, documentation, tests et hygiène Git","triggers":["onFileChange","onCommit","onBranchSwitch"],"tasks":[{"type":"lint","tools":["language-server","grep"]},{"type":"doc","tools":["language-server"],"files":["src/**/*.*","**/*.py","**/*.ts","**/*.js","**/*.cpp","**/*.h"]},{"type":"test-suggestions","tools":["grep"],"pattern":"TODO|FIXME"},{"type":"git-monitor","tools":["git"]}],"git":{"commitMessageTemplate":"chore(agent): {summary}","prTitleTemplate":"feat(agent): {summary}","prBodyIncludesChanges":true}}]}
+﻿{
+  "agents": [
+    {
+      "name": "CodeGuardian",
+      "description": "Agent avancé pour refactoring, documentation, tests et hygiène Git",
+      "triggers": ["onFileChange", "onCommit", "onBranchSwitch"],
+      "tasks": [
+        { "type": "lint", "tools": ["language-server", "grep"] },
+        { "type": "doc",  "tools": ["language-server"], "files": ["src/**/*.*","**/*.py","**/*.ts","**/*.js","**/*.cpp","**/*.h"] },
+        { "type": "test-suggestions", "tools": ["grep"], "pattern": "TODO|FIXME" },
+        { "type": "git-monitor", "tools": ["git"] }
+      ],
+      "git": {
+        "commitMessageTemplate": "chore(agent): {summary}",
+        "prTitleTemplate": "feat(agent): {summary}",
+        "prBodyIncludesChanges": true
+      }
+    }
+  ]
+}
