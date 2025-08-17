@@ -1,0 +1,55 @@
+﻿{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@0xshariq/github-mcp-server"]
+    },
+    "grep": {
+      "command": "python",
+      "args": ["-m", "mcp_grep.server"]
+    },
+    "language-python": {
+      "command": "C:\\Users\\Choua\\go\\bin\\mcp-language-server.exe",
+      "args": ["-lsp", "pyright-langserver", "-workspace", "${workspaceFolder}", "--", "--stdio"]
+    },
+    "language-typescript": {
+      "command": "C:\\Users\\Choua\\go\\bin\\mcp-language-server.exe",
+      "args": ["-lsp", "typescript-language-server", "-workspace", "${workspaceFolder}", "--", "--stdio"]
+    },
+    "language-rust": {
+      "command": "C:\\Users\\Choua\\go\\bin\\mcp-language-server.exe",
+      "args": ["-lsp", "rust-analyzer", "-workspace", "${workspaceFolder}"]
+    },
+    "language-go": {
+      "command": "C:\\Users\\Choua\\go\\bin\\mcp-language-server.exe",
+      "args": ["-lsp", "gopls", "-workspace", "${workspaceFolder}"]
+    },
+    "language-cpp": {
+      "command": "C:\\Users\\Choua\\go\\bin\\mcp-language-server.exe",
+      "args": ["-lsp", "clangd", "-workspace", "${workspaceFolder}", "--", "--stdio"]
+    },
+    "jupyter": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "ROOM_URL", "-e", "ROOM_TOKEN", "-e", "ROOM_ID", "-e", "RUNTIME_URL", "-e", "RUNTIME_TOKEN", "datalayer/jupyter-mcp-server:latest"],
+      "env": {
+        "ROOM_URL": "http://host.docker.internal:8888",
+        "ROOM_TOKEN": "CHANGE_ME",
+        "ROOM_ID": "notebook.ipynb",
+        "RUNTIME_URL": "http://host.docker.internal:8888",
+        "RUNTIME_TOKEN": "CHANGE_ME"
+      }
+    },
+    "browser": {
+      "type": "sse",
+      "url": "sse://browser-extension"
+    },
+    "openapi": {
+      "command": "npx",
+      "args": ["-y", "@janwilmake/openapi-mcp-server", "--url", "https://petstore3.swagger.io/api/v3/openapi.json"]
+    }
+  }
+}
